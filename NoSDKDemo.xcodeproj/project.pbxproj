@@ -316,7 +316,7 @@
 				DEVELOPMENT_TEAM = EL8TZV5FP2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NoSDKDemo/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "So you can participate in the show and take photos simultaneously";
+				INFOPLIST_KEY_NSCameraUsageDescription = "So you can participate in the show using the camera's flashlight.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We just want to sync to the music!";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To save photos of the event!";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To save photos of the event!";
@@ -351,7 +351,7 @@
 				DEVELOPMENT_TEAM = EL8TZV5FP2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NoSDKDemo/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "So you can participate in the show and take photos simultaneously";
+				INFOPLIST_KEY_NSCameraUsageDescription = "So you can participate in the show using the camera's flashlight.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We just want to sync to the music!";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To save photos of the event!";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "To save photos of the event!";
