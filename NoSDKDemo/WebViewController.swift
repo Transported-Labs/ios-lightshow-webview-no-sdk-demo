@@ -55,6 +55,11 @@ public class WebViewController: UIViewController{
             exitButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16)])
         exitButton.addTarget(self, action: #selector(exitButtonPressed(_:)), for: .touchUpInside)
         webViewLink = WebViewLink(viewController: self, webView: self.webView)
+        // Set up bottom toolbar
+        let leftItem = UIBarButtonItem(image: UIImage(systemName: "arrow.left.circle"), style: .plain, target: self, action: nil)
+        let rightItem = UIBarButtonItem(image: UIImage(systemName: "arrow.right.circle"), style: .plain, target: self, action: nil)
+        toolbarItems = [leftItem, rightItem]
+        hidesBottomBarWhenPushed = false
     }
     
     public override func viewWillAppear(_ animated: Bool) {
@@ -72,6 +77,7 @@ public class WebViewController: UIViewController{
     
     @objc private func exitButtonPressed(_ sender: UIButton?) {
         dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
         webViewLink.isTorchLocked = true
         // Clear webView
         webView.load(URLRequest(url: URL(string:"about:blank")!))

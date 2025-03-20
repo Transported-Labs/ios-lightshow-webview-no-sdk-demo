@@ -26,8 +26,13 @@ class ViewController: UIViewController {
         }
         do {
             try webViewController.navigateTo(urlString: urlString)
-            webViewController.modalPresentationStyle = .fullScreen
-            present(webViewController, animated: true)
+            if let nc = self.navigationController {
+                nc.pushViewController(webViewController, animated: true)
+            } else {
+                // Present webViewController without navigationController
+                webViewController.modalPresentationStyle = .fullScreen
+                present(webViewController, animated: true)
+            }
         } catch InvalidUrlError.runtimeError(let message){
             self.showToast(message: message, seconds: 2.0)
         } catch {
